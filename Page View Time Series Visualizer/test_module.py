@@ -101,13 +101,15 @@ class BoxPlotTestCase(unittest.TestCase):
             actual.append(label.get_text())
         expected = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
         self.assertEqual(actual, expected,
-                         "Expected box plot 2 secondary labels to be 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'")
+                         "Expected box plot 2 secondary labels to be 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',"
+                         "'Aug', 'Sep', 'Oct', 'Nov', 'Dec'")
         actual = []
         for label in self.ax1.get_yaxis().get_majorticklabels():
             actual.append(label.get_text())
         expected = ['0', '20000', '40000', '60000', '80000', '100000', '120000', '140000', '160000', '180000', '200000']
         self.assertEqual(actual, expected,
-                         "Expected box plot 1 secondary labels to be '0', '20000', '40000', '60000', '80000', '100000', '120000', '140000', '160000', '180000', '200000'")
+                         "Expected box plot 1 secondary labels to be '0', '20000', '40000', '60000', '80000', '100000',"
+                         "'120000', '140000', '160000', '180000', '200000'")
 
     def test_box_plot_titles(self):
         actual = self.ax1.get_title()

@@ -24,7 +24,8 @@ class LinePlotTestCase(unittest.TestCase):
         actual = self.ax.get_xticks().tolist()
         expected = [1850.0, 1875.0, 1900.0, 1925.0, 1950.0, 1975.0, 2000.0, 2025.0, 2050.0, 2075.0]
         self.assertEqual(actual, expected,
-                         "Expected x tick labels to be '1850.0, 1875.0, 1900.0, 1925.0, 1950.0, 1975.0, 2000.0, 2025.0, 2050.0, 2075.0'")
+                         "Expected x tick labels to be '1850.0, 1875.0, 1900.0, 1925.0, 1950.0, 1975.0, 2000.0, 2025.0,"
+                         "2050.0, 2075.0'")
 
     def test_plot_data_points(self):
         actual = self.ax.get_children()[0].get_offsets().data.tolist()
